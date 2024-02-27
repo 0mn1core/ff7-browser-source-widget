@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="150" height="150">
+  <g id="Top-Left">
+    <path id="tl-1" d="M6 0h3v3H6z" style="fill:#909090;fill-opacity:1" />
+    <path id="tl-2" d="M3 3h3v3H3z" style="fill:#969696;fill-opacity:1" />
+    <path id="tl-3" d="M6 3h3v3H6z" style="fill:#cfcfcf;fill-opacity:1" />
+    <path id="tl-4" d="M0 6h3v3H0z" style="fill:#787878;fill-opacity:1" />
+    <path id="tl-5" d="M3 6h3v3H3z" style="fill:#b1b1b1;fill-opacity:1" />
+    <path id="tl-6" d="M6 6h3v3H6z" style="fill:#898989;fill-opacity:1" />
+  </g>
+  <g id="Top">
+    <path id="t-1" d="M9 0h129v3H9z" style="fill:#909090;fill-opacity:1" />
+    <path id="t-2" d="M9 3h129v3H9z" style="fill:#cfcfcf;fill-opacity:1" />
+    <path id="t-3" d="M9 6h129v3H9z" style="fill:#585858;fill-opacity:1" />
+  </g>
+  <g id="Top-Right">
+    <path id="tr-1" d="M138 0h3v3h-3z" style="fill:#909090;fill-opacity:1" />
+    <path id="tr-2" d="M141 0h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+    <path id="tr-3" d="M138 3h3v3h-3z" style="fill:#cfcfcf;fill-opacity:1" />
+    <path id="tr-4" d="M141 3h3v3h-3z" style="fill:#909090;fill-opacity:1" />
+    <path id="tr-5" d="M144 3h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+    <path id="tr-6" d="M138 6h3v3h-3z" style="fill:#909090;fill-opacity:1" />
+    <path id="tr-7" d="M141 6h3v3h-3z" style="fill:#b6b6b6;fill-opacity:1" />
+    <path id="tr-8" d="M144 6h3v3h-3z" style="fill:#787878;fill-opacity:1" />
+    <path id="tr-9" d="M147 6h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+  </g>
+  <g id="Left">
+    <path id="l-1" d="M0 9h3v129H0z" style="fill:#787878;fill-opacity:1" />
+    <path id="l-2" d="M3 9h3v129H3z" style="fill:#b1b1b1;fill-opacity:1" />
+    <path id="l-3" d="M6 9h3v129H6z" style="fill:#414141;fill-opacity:1" />
+  </g>
+  <g id="Right">
+    <path id="r-1" d="M141 9h3v132h-3z" style="fill:#818181;fill-opacity:1" />
+    <path id="r-2" d="M144 9h3v132h-3z" style="fill:#c0c0c0;fill-opacity:1" />
+    <path id="r-3" d="M147 9h3v132h-3z" style="fill:#303030;fill-opacity:1" />
+  </g>
+  <g id="Bot-Left">
+    <path id="bl-1" d="M0 138h3v3H0z" style="fill:#787878;fill-opacity:1" />
+    <path id="bl-2" d="M3 138h3v3H3z" style="fill:#b1b1b1;fill-opacity:1" />
+    <path id="bl-3" d="M6 138h3v3H6z" style="fill:#909090;fill-opacity:1" />
+    <path id="bl-4" d="M0 141h3v3H0z" style="fill:#303030;fill-opacity:1" />
+    <path id="bl-5" d="M3 141h3v3H3z" style="fill:#767676;fill-opacity:1" />
+    <path id="bl-6" d="M6 141h3v3H6z" style="fill:#b1b1b1;fill-opacity:1" />
+    <path id="bl-7" d="M3 144h3v3H3z" style="fill:#303030;fill-opacity:1" />
+    <path id="bl-8" d="M6 144h3v3H6z" style="fill:#898989;fill-opacity:1" />
+    <path id="bl-9" d="M6 147h3v3H6z" style="fill:#303030;fill-opacity:1" />
+  </g>
+  <g id="Bot">
+    <path id="b-1" d="M9 141h132v3H9z" style="fill:#909090;fill-opacity:1" />
+    <path id="b-2" d="M9 144h129v3H9z" style="fill:#d0d0d0;fill-opacity:1" />
+    <path id="b-3" d="M6 147h138v3H9z" style="fill:#303030;fill-opacity:1" />
+  </g>
+  <g id="Bot-Right">
+    <path id="br-1" d="M138 141h3v3h-3z" style="fill:#909090;fill-opacity:1" />
+    <path id="br-2" d="M141 141h3v3h-3z" style="fill:#c0c0c0;fill-opacity:1" />
+    <path id="br-3" d="M144 141h3v3h-3z" style="fill:#787878;fill-opacity:1" />
+    <path id="br-4" d="M147 141h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+    <path id="br-5" d="M138 144h3v3h-3z" style="fill:#d0d0d0;fill-opacity:1" />
+    <path id="br-6" d="M141 144h3v3h-3z" style="fill:#9c9c9c;fill-opacity:1" />
+    <path id="br-7" d="M144 144h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+    <path id="br-8" d="M138 147h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+    <path id="br-9" d="M141 147h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+  </g>
+</svg>
