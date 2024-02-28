@@ -29,3 +29,5 @@ export const FF7_BORDER_VALUES: StandardAsymSliceBorderProps = {
     width: "9px",
   },
 }
+
+export const TIME_FORMAT_REGEX = /^(\d{1,3}:)?[0-5]\d:[0-5]\d$/

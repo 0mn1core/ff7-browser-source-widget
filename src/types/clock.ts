@@ -4,3 +4,13 @@ export enum ClockFormat {
   TwoHourDigits = "HH:MM:SS",
   ThreeHourDigits = "HHH:MM:SS"
 }
+
+/**
+ * Create a numeric enum with reverse mapping for format comparison.
+ */
+export enum ClockFormatRank {
+  "MM:SS",
+  "H:MM:SS",
+  "HH:MM:SS",
+  "HHH:MM:SS"
+}

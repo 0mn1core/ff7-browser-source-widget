@@ -1,4 +1,5 @@
-import { ClockFormat } from "../types/clock";
+import { ClockFormat, ClockFormatRank } from "../types/clock";
+import { TIME_FORMAT_REGEX } from "./consts";
 
 interface SegmentedTime {
   seconds: number;
@@ -61,13 +62,16 @@ export function timeMatchesFormat(
 
 /**
  * Function to get the corresponding clock format for a given clock string.
- * @param {string} clockTime The clock string to get the format for.
- * @returns {ClockFormat | undefined} The corresponding ClockFormat, or undefined if it doesn't match any.
+ * If the minimum parameter is set, gets the minimum supported format after stripping leading zeroes.
+ * @param {string} clockTime The clock string to get the corresponding or minimum format for.
+ * @param {boolean} minimum Whether to get the corresponding or minimum ClockFormat.
+ * @returns {ClockFormat | undefined} The corresponding or minimum ClockFormat, or undefined if it doesn't match any.
  */
 export function getFormatFromTime(
-  clockTime: string
+  clockTime: string,
+  minimum = false,
 ): ClockFormat | undefined {
-  const matchesAnyFormat = /^(\d{1,3}:)?\d{2}:\d{2}$/.test(clockTime)
+  const matchesAnyFormat = TIME_FORMAT_REGEX.test(clockTime)
   if (!matchesAnyFormat) {
     return undefined;
   }
@@ -76,8 +80,56 @@ export function getFormatFromTime(
     return ClockFormat.ZeroHourDigits
   }
   if (splitTime.length === 3) {
-    const hourDigits = splitTime[0].length
-    const hourFormats = [undefined, ClockFormat.OneHourDigit, ClockFormat.TwoHourDigits, ClockFormat.ThreeHourDigits]
+    let hourString = splitTime[0]
+    if (minimum) {
+      // Convert to number and back to strip leading zeroes
+      hourString = hourString.replace(/^0+/, "");
+    }
+    let hourDigits = hourString.length
+    const hourFormats = [ClockFormat.ZeroHourDigits, ClockFormat.OneHourDigit, ClockFormat.TwoHourDigits, ClockFormat.ThreeHourDigits]
     return hourFormats[hourDigits];
   }
+}
+
+/**
+ * 
+ * @param {string} clockTime The clock string to get the necessary format for.
+ * @param {ClockFormat} currentClockFormat The current ClockForma to compare against
+ * @returns {ClockFormat | undefined} The necessary ClockFormat to use, or undefined if the current one suffices.
+ */
+export function getNecessaryFormat(
+  clockTime: string,
+  currentClockFormat: ClockFormat
+): ClockFormat | undefined{
+  const minimumClockFormat = getFormatFromTime(clockTime, true);
+  if (!minimumClockFormat) {
+    return undefined;
+  }
+  if (ClockFormatRank[minimumClockFormat] > ClockFormatRank[currentClockFormat]) {
+    return minimumClockFormat;
+  }
+}
+
+/**
+ * Get a date object respresenting the current time plus the passed in clock string.
+ * If the passed in string isn't properly formatted, return the current time.
+ * @param {String} clockTime A formatted clock string, to be used in creation of the date.
+ * @returns {Date} A date object representing the time in the future based on the clock string.
+ */
+export function getDateFromClockTime(
+  clockTime: string
+){
+  const matchesAnyFormat = TIME_FORMAT_REGEX.test(clockTime)
+  if (!matchesAnyFormat) {
+    return new Date();
+  }
+  const splitTime = clockTime.split(':');
+  let hours = 0;
+  if (splitTime.length === 3) {
+    hours = Number(splitTime[0]);
+    splitTime.shift();
+  }
+  const minutes = Number(splitTime[0]);
+  const seconds = Number(splitTime[1]);
+  return new Date(Date.now() + (((hours * 60 * 60) + (minutes * 60) + (seconds)) * 1000))
 }
