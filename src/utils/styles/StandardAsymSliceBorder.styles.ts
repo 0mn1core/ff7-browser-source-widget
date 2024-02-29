@@ -1,3 +1,13 @@
+/**
+ * Went with this approach as border-image wouldn't work with the asymmetrical border,
+ * and background-image would scale the SVG uniformly, preventing intended display.
+ * 
+ * Unfortunately, was not able to figure out how to make an SVG scale non-uniformly. It's 
+ * a Scalable Vector Graphic, not a Relative Vector Graphic. The only other viable approach I could think of
+ * would be to use the `vector-effect: non-scaling-stroke` on a bunch of path with square end caps, and creating
+ * a quilt/lattice to display the pixels at the appropriate points without scaling.
+ */
+
 import styled from "@emotion/styled";
 
 interface CornerDimensions {

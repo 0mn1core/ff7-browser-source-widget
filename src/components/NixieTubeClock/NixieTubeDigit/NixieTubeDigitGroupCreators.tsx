@@ -3,6 +3,10 @@
  *
  * Original idea was to use z-index to render the active digit above the inactive ones.
  * Unfortunately, SVG's do not support z-index; render order of elements is determined solely by the order in the SVG.
+ * 
+ * The proposed spec for SVG version 2 references stacking context, which is what powers z-index for HTML,
+ * but it remains to be seen whether this spec will be released and supported by browsers, and whether
+ * control of the stacking context will be made available through z-index styling.
  *
  * Drawback to this approach:
  *  * Image is hardcoded, would prefer loading from a file as that's easier to replace and would make the related components more re-usable.

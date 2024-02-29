@@ -41,6 +41,12 @@ export function formatClockTime(
   return stringNumbers.join(':');
 }
 
+/**
+ * Function to check whether a given clock string matches a given clock format.
+ * @param {ClockFormat} clockFormat The format to check the match against.
+ * @param {string} clockTime The clock string to check against the format.
+ * @returns {boolean} Whether the passed in time correctly matches the format.
+ */
 export function timeMatchesFormat(
   clockFormat: ClockFormat,
   clockTime: string
@@ -92,7 +98,7 @@ export function getFormatFromTime(
 }
 
 /**
- * 
+ * Function to get the format necessary to update to if the current format isn't sufficient for a given string.
  * @param {string} clockTime The clock string to get the necessary format for.
  * @param {ClockFormat} currentClockFormat The current ClockForma to compare against
  * @returns {ClockFormat | undefined} The necessary ClockFormat to use, or undefined if the current one suffices.

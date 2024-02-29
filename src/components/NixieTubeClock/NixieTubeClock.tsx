@@ -16,9 +16,11 @@ export interface NixieTubeClockProps {
 }
 
 /**
- * 
- * @param props
- * @returns 
+ * Component for the clock display.
+ * @param {NixieTubeClockProps} props Props object containing the clockFormat and clockTime
+ *                                    for figuring out how many elements to display and how
+ *                                    to style them.
+ * @returns {React.ReactElement} A clock component that displays the time for the format using styled SVG's.
  */
 const NixieTubeClock = ({
   clockFormat,

@@ -4,7 +4,7 @@ import { getFormatFromTime } from "../../../utils/clock-utils"
 
 import { TimeFormatSelect } from "./TimeFormatSelector.styles";
 
-export interface TimeFormatSelectorProps{
+export interface TimeFormatSelectorProps {
   days: number;
   hours: number;
   clockTime: string;
@@ -12,6 +12,13 @@ export interface TimeFormatSelectorProps{
   setClockFormat: React.Dispatch<React.SetStateAction<ClockFormat>>;
 }
 
+/**
+ * Component for the time format selection drop down.
+ * @param {TimeFormatSelectorProps} props Props object containing the days/hours to minimize minimum format calculations,
+ *                                        clockTime for the minimum format calculations, clockFormat for the controlled component.
+ *                                        and the setClockFormat to update the lifted state.
+ * @returns {React.ReactElement} A select dropdown that updates the clockFormat state and prevents picking incompatible formats for the current time.
+ */
 const TimeFormatSelector = ({
   days,
   hours,

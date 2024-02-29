@@ -15,6 +15,12 @@ export interface FF7BorderProps {
   className?: string
 }
 
+/**
+ * Component that wraps the stylized border around the passed in child
+ * @param {FF7BorderProps} props Props object containing the child component to render, as well as className
+ *                               to allow this component to be styled by Emotion.
+ * @returns {React.ReactElement} The child component with the stylized FF7 border surrounding it.
+ */
 const FF7Border = ({children, className}: FF7BorderProps): React.ReactElement => {
   return (
     <StandardAsymSliceBorder className={className} {...FF7_BORDER_VALUES}>

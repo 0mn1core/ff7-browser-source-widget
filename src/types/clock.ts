@@ -1,3 +1,6 @@
+/**
+ * Create a string enum to reference formats in code.
+ */
 export enum ClockFormat {
   ZeroHourDigits = "MM:SS",
   OneHourDigit = "H:MM:SS",

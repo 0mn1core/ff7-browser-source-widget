@@ -12,6 +12,12 @@ export interface TimeSetterProps {
   restart: (newExpiryTimestamp: Date, autoStart?: boolean) => void;
 }
 
+/**
+ * Component for the countdown time input.
+ * @param {TimeSetterProps} props Props object containing the function to set the countdown to a new time, as well as the
+ *                                clockFormat and setter for bumping the format to accomodate times larger than the current format 
+ * @returns {React.ReactElement} An input that sets the time for the countdown, and bumps the format to accomodate if needed.
+ */
 const TimeSetter = ({
   clockFormat,
   setClockFormat,
