@@ -10,7 +10,7 @@ import FF7Form from '../FF7Form';
  */
 const FF7Overlay = (): React.ReactElement =>{
   const [clockFormat, setClockFormat] = useState<ClockFormat>(ClockFormat.ZeroHourDigits);
-  const {seconds, minutes, hours, days, restart} = useTimer({expiryTimestamp: new Date(Date.now() + 10*60*1000), autoStart: true});
+  const {seconds, minutes, hours, days, restart} = useTimer({expiryTimestamp: new Date(Date.now()), autoStart: false});
   const clockTime = useMemo
   (
     () => formatClockTime(
@@ -33,8 +33,8 @@ const FF7Overlay = (): React.ReactElement =>{
 
   return (
     <>
-      <FF7Widgets clockFormat={clockFormat} clockTime={clockTime}/>
-      <FF7Form clockFormat={clockFormat} setClockFormat={setClockFormat} restart={restart}/>
+      <FF7Widgets clockTime={clockTime} clockFormat={clockFormat}/>
+      <FF7Form clockTime={clockTime} clockFormat={clockFormat} setClockFormat={setClockFormat} hours={hours} days={days} restart={restart}/>
     </>
   );
 }
