@@ -29,6 +29,7 @@ const FF7Overlay = (): React.ReactElement => {
   return (
     <>
       <FF7Widgets clockTime={clockTime} clockFormat={clockFormat} />
+      <div className="spacer" />
       <FF7Form
         clockTime={clockTime}
         clockFormat={clockFormat}
