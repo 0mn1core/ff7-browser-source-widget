@@ -55,7 +55,7 @@ const ColorControl = ({
 
   return(
     <ColorControlContainer>
-      <ColorMateria id={buttonId} themeColorName={themeColorName} onClick={togglePicker} />
+      <ColorMateria id={buttonId} type="button" themeColorName={themeColorName} onClick={togglePicker} />
       <ColorPickerContainer tabIndex={0} onBlur={onBlurHandler} ref={colorPickerContainerRef} showPicker={showPicker}>
         <HexColorPicker color={theme[themeColorName]} onChange={colorChangeHandler}/>
         <HexColorInput themeColorName={themeColorName}/>

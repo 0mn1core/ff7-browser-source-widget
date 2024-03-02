@@ -26,7 +26,7 @@ const PlayPauseButton = ({
   }
 
   return (
-    <TimeToggleButton id="clock-play-pause" onClick={onClickHandler}>
+    <TimeToggleButton id="clock-play-pause" type="button" onClick={onClickHandler}>
       {isRunning ? 'Pause' : 'Play'}
     </TimeToggleButton>
   )

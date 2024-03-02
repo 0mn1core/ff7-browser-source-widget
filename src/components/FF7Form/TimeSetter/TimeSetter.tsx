@@ -52,7 +52,9 @@ const TimeSetter = ({
         if (clockFormatToSet) {
           setClockFormat(clockFormatToSet)
         }
-        restart(getDateFromClockTime(formattedTime));
+        restart(getDateFromClockTime(formattedTime), false);
+      } else {
+        setIsValid(false);
       }
     }
   }

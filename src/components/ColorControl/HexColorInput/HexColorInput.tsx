@@ -50,6 +50,8 @@ const ColorHexInput = ({
             value: color
           }
         );
+      } else {
+        setIsValid(false);
       }
     }
   };
