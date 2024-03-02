@@ -4,7 +4,8 @@ import { useState } from "react";
 import { TIME_FORMAT_REGEX } from "../../../utils/consts";
 import { getDateFromClockTime, getNecessaryFormat } from "../../../utils/clock-utils";
 
-import { TimeInput, ValidationMessage } from "./TimeSetter.styles";
+import { ValidationMessage } from "../../../utils/styles/ValidationMessage.styles";
+import { TimeInput } from "./TimeSetter.styles";
 
 export interface TimeSetterProps {
   clockFormat: ClockFormat;

@@ -1,5 +1,6 @@
 import type { Dispatch } from "react"
-import type { FF7WidgetTheme } from "../../types/theme";
+import type { Theme } from '@emotion/react';
+
 import { createContext, useContext, useReducer } from "react";
 import { ThemeProvider } from "@emotion/react";
 
@@ -10,7 +11,7 @@ interface ThemeUpdateAction {
 
 interface EditableThemeProviderProps {
   children: React.ReactElement;
-  initialTheme: FF7WidgetTheme;
+  initialTheme: Theme;
 }
 
 const EditableThemeDispatchContext = createContext<Dispatch<ThemeUpdateAction> | undefined>(undefined);
@@ -35,7 +36,7 @@ export function useEditableThemeDispatch() {
  * @param {ThemeUpdateAction} action An object containing the name of the them
  * @returns The theme updated with the attribute and value represented by the action.
  */
-function themeReducer(state: FF7WidgetTheme, action: ThemeUpdateAction): FF7WidgetTheme {
+function themeReducer(state: Theme, action: ThemeUpdateAction): Theme {
   return {
     ...state,
     [action.key]: action.value

@@ -17,9 +17,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^1.2.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "react": "^18.2.0",
+    "react-colorful": "^5.6.1",
     "react-dom": "^18.2.0",
     "react-timer-hook": "^3.0.7"
   },

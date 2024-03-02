@@ -31,3 +31,7 @@ export const FF7_BORDER_VALUES: StandardAsymSliceBorderProps = {
 }
 
 export const TIME_FORMAT_REGEX = /^(\d{1,3}:)?[0-5]\d:[0-5]\d$/
+
+export const HEX_FORMAT_REGEX = /^#[0-9a-fA-F]{6}$/
+
+
