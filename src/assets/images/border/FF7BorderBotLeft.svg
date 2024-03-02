@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 9 12">
+  <path id="bl-1" d="M0 0h3v3h-3z" style="fill:#787878;fill-opacity:1" />
+  <path id="bl-2" d="M3 0h3v3h-3z" style="fill:#b1b1b1;fill-opacity:1" />
+  <path id="bl-3" d="M6 0h3v3h-3z" style="fill:#909090;fill-opacity:1" />
+  <path id="bl-4" d="M0 3h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+  <path id="bl-5" d="M3 3h3v3h-3z" style="fill:#767676;fill-opacity:1" />
+  <path id="bl-6" d="M6 3h3v3h-3z" style="fill:#b1b1b1;fill-opacity:1" />
+  <path id="bl-7" d="M3 6h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+  <path id="bl-8" d="M6 6h3v3h-3z" style="fill:#898989;fill-opacity:1" />
+  <path id="bl-9" d="M6 9h3v3h-3z" style="fill:#303030;fill-opacity:1" />
+</svg>
